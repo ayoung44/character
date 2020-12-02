@@ -1,0 +1,148 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background: rgba(255, 192, 203, 0.13);
+}
+.box {
+    width: 50%;
+    height: 1000px;
+    background: rgba(241, 165, 178, 0.226);
+
+    margin: 0 auto;
+}
+    
+.person {
+    width: 300px;
+    height: 300px;
+    border: 3px dashed #777;
+
+    /* 중앙정렬 */
+    /* body에 붙어있다면  */
+    /* margin: 0 auto; */
+
+    /* body와 띄어진 경우 */
+    position: absolute;  
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+    cursor: pointer;
+    /* border margin padding.. 등을 적용해도 크기 300으로 고정 */
+    box-sizing: border-box;
+    margin-top: -50%;
+
+}
+
+.face {
+    position: absolute;
+    left: 100px;
+    top: 40px;
+    width: 100px;
+    height: 100px;
+    background: #fcd4c5; 
+    border-radius: 0 0 45px 45px;
+    box-shadow: 0 4px 2px -2px #0201001f;
+    z-index: 0;
+
+    /* 벗어난 부분 감추기 */
+    overflow: hidden;
+}
+.eye {
+    width: 12px;
+    height: 12px;
+    background: rgb(78, 48, 48);
+    border-radius: 50%;
+    position: absolute;
+}
+.eye1 {
+    left: 25px;
+    top: 45px;
+}
+.eye2 {
+    left: 63px;
+    top: 45px;
+}
+
+.nose {
+    width: 8px;
+    height: 25px;
+    background: #ff7da2;
+    position: absolute;
+    left: 46px;
+    top: 50px;
+}
+.mouth {
+    width: 25px;
+    height: 25px;
+  
+    position: absolute;
+    left: 37.5px;
+    top: 63px;    
+    border-radius: 50%;
+    border: 3px solid #f35f89;
+    box-sizing: border-box;
+
+    /* 특정 부분만 보이게 함 */
+    clip-path: polygon(0 60%, 100% 60%, 100% 100%, 0 100%);
+}
+
+.hair {
+    background: rgb(12, 10, 7);
+    position: absolute;
+}
+.hair1 {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    top: -65px;
+    left: 30px;
+
+}
+.hair2 {
+    width: 70px;
+    height: 100px;
+    border-radius: 50%;
+    top: -50px;
+    left: -30px;
+}
+.out-hair {
+    width: 120px;
+    height: 170px;
+    top: 20px;
+    left: 90px;
+    border-radius: 50px 50px 10px 10px;
+
+    z-index: -2;
+}
+.out-hair2 {
+    width: 43px;
+    height: 70px;
+    top: 130px;
+    left: 90px;
+    border-radius: 10px;
+    z-index: -1;
+}
+
+.neck {
+    width: 20px;
+    height: 40px;
+    position: absolute;
+    top: 130px;
+    left: 140px;
+    background: #fcd4c5;
+    border-radius: 10px;
+
+    z-index: -1;
+}
+.body {
+    width: 120px;
+    height: 100px;
+    position: absolute;
+    top: 150px;
+    left: 90px;
+    background: #C2656D;
+    border-radius: 60px 60px 10px 10px;
+    box-shadow: 0 4px 2px -2px #5f27274d;
+    z-index: -2;
+}
